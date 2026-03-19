@@ -1,0 +1,30 @@
+.section { padding: 7rem 3rem; border-top: 1px solid var(--border); }
+.header { margin-bottom: 4rem; }
+.title { font-family: 'Orbitron', monospace; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 900; letter-spacing: 0.04em; margin-top: 0.6rem; line-height: 1.1; }
+.cyan { color: var(--cyan); text-shadow: 0 0 20px rgba(0,245,255,0.3); }
+.sub { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: var(--gray); margin-top: 0.8rem; }
+.caseCard { background: var(--card); border: 1px solid var(--border); overflow: hidden; margin-bottom: 3rem; transition: border-color 0.3s; }
+.caseCard:hover { border-color: rgba(0,245,255,0.25); }
+.caseTop { display: flex; align-items: center; justify-content: space-between; padding: 2rem 2.5rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 1rem; }
+.caseMeta { display: flex; flex-direction: column; gap: 0.3rem; }
+.caseClient { font-family: 'Orbitron', monospace; font-size: 1.1rem; font-weight: 700; color: var(--white); }
+.caseIndustry { font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--cyan); font-weight: 500; }
+.caseBadge { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); border: 1px solid rgba(0,245,255,0.3); padding: 0.4rem 1rem; }
+.caseBody { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.caseSection { padding: 2.5rem; border-bottom: 1px solid var(--border); }
+.caseSection:first-child { border-right: 1px solid var(--border); }
+.caseSectionTitle { font-family: 'Orbitron', monospace; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; color: var(--cyan); margin-bottom: 1rem; }
+.caseSectionText { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--gray); line-height: 1.75; }
+.caseMetrics { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--border); }
+.metric { padding: 2rem 2.5rem; border-right: 1px solid var(--border); }
+.metric:last-child { border-right: none; }
+.metricVal { font-family: 'Orbitron', monospace; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 900; color: var(--cyan); text-shadow: 0 0 20px rgba(0,245,255,0.3); display: block; line-height: 1; margin-bottom: 0.5rem; }
+.metricLabel { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--gray); display: block; }
+.caseQuote { padding: 2.5rem; }
+.quoteText { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: var(--white); line-height: 1.75; font-style: italic; margin-bottom: 1.5rem; }
+.quoteAttr { display: flex; gap: 1rem; align-items: center; }
+.quoteName { font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--white); }
+.quoteLocation { font-size: 0.85rem; color: var(--gray); }
+.addYours { text-align: center; padding: 3rem; background: var(--dark); border: 1px solid var(--border); }
+.addYoursText { font-family: 'Orbitron', monospace; font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; color: var(--gray); margin-bottom: 1.5rem; }
+@media (max-width: 900px) { .section { padding: 5rem 1.5rem; } .caseBody { grid-template-columns: 1fr; } .caseSection:first-child { border-right: none; } .caseMetrics { grid-template-columns: repeat(2, 1fr); } .metric { border-bottom: 1px solid var(--border); } }

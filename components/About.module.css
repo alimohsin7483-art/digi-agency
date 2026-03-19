@@ -1,0 +1,29 @@
+.section {
+  padding: 7rem 3rem; border-top: 1px solid var(--border);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start;
+}
+.title {
+  font-family: 'Orbitron', monospace; font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900; letter-spacing: 0.04em; line-height: 1.1; margin: 0.8rem 0 1.5rem;
+}
+.cyan { color: var(--cyan); text-shadow: 0 0 20px rgba(0,245,255,0.3); }
+.desc { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: var(--gray); line-height: 1.8; margin-bottom: 2.5rem; max-width: 420px; }
+.step { display: grid; grid-template-columns: 60px 1fr; gap: 1.2rem; align-items: start; position: relative; padding-bottom: 2rem; }
+.step:last-child { padding-bottom: 0; }
+.stepNum {
+  font-family: 'Orbitron', monospace; font-size: 0.75rem; font-weight: 900; color: var(--cyan);
+  background: var(--card); border: 1px solid rgba(0,245,255,0.3);
+  width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; box-shadow: 0 0 15px rgba(0,245,255,0.1);
+}
+.stepTitle {
+  font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase; color: var(--white); margin-bottom: 0.5rem;
+}
+.stepDesc { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--gray); line-height: 1.75; }
+.connector {
+  position: absolute; left: 23px; top: 48px; width: 1px;
+  height: calc(100% - 48px);
+  background: linear-gradient(to bottom, var(--cyan), transparent); opacity: 0.3;
+}
+@media (max-width: 900px) { .section { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; } }
