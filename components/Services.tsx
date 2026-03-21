@@ -4,26 +4,41 @@ const services = [
   {
     icon: "◈",
     number: "01",
-    title: "Website Design & Development",
-    desc: "Your website is your most powerful sales tool. We build fast, conversion-optimised websites that make your brand look world-class — and turn visitors into paying customers.",
-    bullets: ["Custom design — no templates", "Mobile-first & lightning fast", "Built to convert, not just look good", "Delivered in 14 days"],
-    tag: "Most Popular",
+    title: "High-Converting Website",
+    desc: "Most websites look good but do nothing. We build websites engineered for one purpose — turning visitors into leads and leads into paying customers. Every element has a job.",
+    bullets: [
+      "Conversion-first design and copy",
+      "Mobile-optimised and fast",
+      "Clear CTAs at every touchpoint",
+      "Delivered in 14 days",
+    ],
+    tag: "Foundation",
   },
   {
     icon: "⬡",
     number: "02",
-    title: "Funnel & Lead Systems",
-    desc: "Stop depending on referrals and cold outreach. We build automated lead funnels that attract your ideal customers, capture their details and nurture them to buy — on autopilot.",
-    bullets: ["Lead magnet + landing page", "Email nurture sequences", "Booking & inquiry system", "CRM setup & pipeline"],
-    tag: "High ROI",
+    title: "Lead Funnel System",
+    desc: "A website alone is not a business. We build the complete system — landing page, lead magnet, email sequence and booking flow — that moves strangers into booked calls on autopilot.",
+    bullets: [
+      "Lead magnet + squeeze page",
+      "Automated email nurture sequence",
+      "Calendar booking integration",
+      "Full CRM pipeline setup",
+    ],
+    tag: "Core Product",
   },
   {
     icon: "⚡",
     number: "03",
-    title: "Automation Setup",
-    desc: "Reclaim hours every week. We map and automate your repetitive business workflows — client onboarding, follow-ups, reminders, invoicing — so you focus on growth, not admin.",
-    bullets: ["Workflow mapping & design", "Tool integration (Zapier, Make)", "Client onboarding automation", "Ongoing support & maintenance"],
-    tag: "Time Saver",
+    title: "Automation & Follow-Up",
+    desc: "Most leads go cold because of slow follow-up. We automate your entire post-enquiry process — so every lead gets followed up instantly, consistently and without you lifting a finger.",
+    bullets: [
+      "Instant lead response automation",
+      "Multi-step follow-up sequences",
+      "Onboarding and reminder flows",
+      "Integrates with your existing tools",
+    ],
+    tag: "Multiplier",
   },
 ];
 
@@ -32,9 +47,11 @@ export default function Services() {
     <section id="services" className={styles.section}>
       <div className={styles.header}>
         <div>
-          <span className="section-label">// What We Build</span>
-          <h2 className={styles.title}>THREE SYSTEMS.<br />ONE GOAL: MORE GROWTH.</h2>
-          <p className={styles.sub}>We don&apos;t do everything. We do three things exceptionally well — and together, they build a business that attracts clients and runs without the constant hustle.</p>
+          <span className="section-label">// The Problem & The Fix</span>
+          <h2 className={styles.title}>YOUR WEBSITE IS NOT<br />THE PROBLEM. YOUR<br />SYSTEM IS.</h2>
+          <p className={styles.sub}>
+            Most businesses have a website. Very few have a system. A system is what turns traffic into leads, leads into calls and calls into clients — automatically. Here&apos;s what we build.
+          </p>
         </div>
       </div>
       <div className={styles.grid}>
@@ -55,7 +72,7 @@ export default function Services() {
                 </li>
               ))}
             </ul>
-            <a href="#contact" className={styles.cardCta}>Get Started →</a>
+            <a href="#contact" className={styles.cardCta}>Get This Built →</a>
           </div>
         ))}
       </div>

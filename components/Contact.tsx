@@ -8,7 +8,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // 👉 Connect Formspree: replace action with https://formspree.io/f/YOUR_ID
+    // 👉 Connect Formspree: action="https://formspree.io/f/YOUR_ID"
     setSubmitted(true);
   };
 
@@ -17,21 +17,22 @@ export default function Contact() {
       <div className={styles.grid} aria-hidden />
       <div className={styles.inner}>
         <div className={styles.left}>
-          <span className="section-label">// Free Strategy Call</span>
+          <span className="section-label">// Free Strategy Call + Audit</span>
           <h2 className={styles.title}>
-            LET&apos;S BUILD<br />
-            YOUR <span className={styles.cyan}>GROWTH</span><br />
-            SYSTEM.
+            LET&apos;S FIND OUT<br />
+            WHY YOUR <span className={styles.cyan}>LEADS</span><br />
+            AREN&apos;T CONVERTING.
           </h2>
           <p className={styles.desc}>
-            Book a free 30-minute strategy call. We&apos;ll review your current online presence, identify the biggest opportunities and show you exactly what we&apos;d build — no obligation, no pressure.
+            In 30 minutes we&apos;ll audit your current website and online presence, identify exactly where you&apos;re losing leads — and show you the system we&apos;d build to fix it. Free. No obligation.
           </p>
+
           <div className={styles.perks}>
             {[
-              "Free 30-min strategy session",
-              "Custom audit of your business",
-              "Clear action plan — yours to keep",
-              "No pushy sales pitch",
+              "Free audit of your current website",
+              "Funnel gap analysis — where you're losing leads",
+              "Custom action plan — yours to keep regardless",
+              "No hard sell, no pressure",
             ].map((p) => (
               <div key={p} className={styles.perk}>
                 <span className={styles.perkIcon}>✓</span>
@@ -40,7 +41,6 @@ export default function Contact() {
             ))}
           </div>
 
-          {/* Real contact details */}
           <div className={styles.contactDetails}>
             <a href="mailto:alimohsin7483@gmail.com" className={styles.contactItem}>
               <span className={styles.contactIcon}>✉</span>
@@ -54,7 +54,7 @@ export default function Contact() {
 
           <div className={styles.availability}>
             <span className={styles.availDot} />
-            <span className={styles.availText}>Currently accepting 3 new clients this month</span>
+            <span className={styles.availText}>3 strategy call slots available this week</span>
           </div>
         </div>
 
@@ -62,8 +62,8 @@ export default function Contact() {
           {submitted ? (
             <div className={styles.success}>
               <span className={styles.check}>✓</span>
-              <p className={styles.successTitle}>CALL REQUEST RECEIVED</p>
-              <p className={styles.successSub}>We&apos;ll be in touch within 24 hours to confirm your slot.</p>
+              <p className={styles.successTitle}>YOU&apos;RE BOOKED IN</p>
+              <p className={styles.successSub}>We&apos;ll review your website before the call and come prepared. Expect a message within 24 hours.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className={styles.form}>
@@ -80,30 +80,30 @@ export default function Contact() {
                 </div>
               </div>
               <div className={styles.field}>
-                <label>Business / Brand Name</label>
-                <input type="text" placeholder="What's your business called?"
+                <label>Your Website URL</label>
+                <input type="text" placeholder="https://yourwebsite.com (or leave blank if you don't have one)"
                   value={form.business} onChange={(e) => setForm({ ...form, business: e.target.value })} />
               </div>
               <div className={styles.field}>
-                <label>What do you need? *</label>
+                <label>What do you need most? *</label>
                 <select required value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}>
-                  <option value="">Select a service...</option>
-                  <option>Website Design & Development</option>
-                  <option>Funnel & Lead System</option>
-                  <option>Automation Setup</option>
-                  <option>All of the above</option>
-                  <option>Not sure — need advice</option>
+                  <option value="">Select the biggest problem...</option>
+                  <option>I need a website that actually converts</option>
+                  <option>I need a funnel to generate leads</option>
+                  <option>I need automation to follow up on leads</option>
+                  <option>I need the full system — all three</option>
+                  <option>Not sure — I need the audit first</option>
                 </select>
               </div>
               <div className={styles.field}>
-                <label>Tell us about your business</label>
-                <textarea placeholder="What do you do, who do you serve, and what's your biggest challenge right now?" rows={4}
+                <label>Tell us about your business *</label>
+                <textarea placeholder="What do you sell, who is your customer, and what does your current lead generation look like?" rows={4} required
                   value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
               </div>
               <button type="submit" className="btn-primary" style={{ width: "100%", textAlign: "center", display: "block", fontSize: "1rem", padding: "1.1rem" }}>
                 Book My Free Strategy Call →
               </button>
-              <p className={styles.note}>No spam. No obligation. Just a useful conversation.</p>
+              <p className={styles.note}>We review your website before the call — so the 30 minutes is focused entirely on your business.</p>
             </form>
           )}
         </div>

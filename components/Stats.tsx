@@ -1,10 +1,10 @@
 import styles from "./Stats.module.css";
 
 const stats = [
-  { val: "14", unit: "Days", label: "Average Delivery Time" },
-  { val: "3x",  unit: "Avg",  label: "More Leads After Launch" },
-  { val: "10+", unit: "hrs/wk", label: "Saved via Automation" },
-  { val: "100%", unit: "",    label: "Done-For-You Service" },
+  { val: "3x",   unit: "",       label: "More leads on average after launch" },
+  { val: "14",   unit: " Days",  label: "From brief to fully live system" },
+  { val: "68%",  unit: "",       label: "Of leads go cold without automation" },
+  { val: "100%", unit: "",       label: "Done-for-you — you focus on clients" },
 ];
 
 export default function Stats() {

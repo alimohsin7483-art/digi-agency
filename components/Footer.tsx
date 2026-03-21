@@ -11,38 +11,39 @@ export default function Footer() {
             <span className={styles.logoSub}>DIGITAL</span>
           </a>
           <p className={styles.tagline}>
-            We build websites, lead funnels and automation systems that help businesses of all kinds grow online — and get more customers, every day.
+            We build high-converting funnels, lead systems and automation for coaches, creators and local businesses. Stop losing leads. Start closing them.
           </p>
           <a href="#contact" className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.8rem 1.8rem", display: "inline-block", marginTop: "1rem" }}>
-            Book Free Strategy Call →
+            Get Free Audit →
           </a>
         </div>
 
         <div className={styles.col}>
-          <h4 className={styles.colTitle}>Services</h4>
-          <a href="#services" className={styles.colLink}>Website Design & Development</a>
-          <a href="#services" className={styles.colLink}>Funnel & Lead Systems</a>
-          <a href="#services" className={styles.colLink}>Automation Setup</a>
+          <h4 className={styles.colTitle}>What We Build</h4>
+          <a href="#services" className={styles.colLink}>High-Converting Website</a>
+          <a href="#services" className={styles.colLink}>Lead Funnel System</a>
+          <a href="#services" className={styles.colLink}>Automation & Follow-Up</a>
         </div>
 
         <div className={styles.col}>
-          <h4 className={styles.colTitle}>Company</h4>
-          <a href="#about" className={styles.colLink}>How It Works</a>
-          <a href="#work" className={styles.colLink}>Case Studies</a>
-          <a href="#contact" className={styles.colLink}>Book a Call</a>
+          <h4 className={styles.colTitle}>Who We Help</h4>
+          <span className={styles.colLink} style={{ cursor: "default" }}>Coaches & Consultants</span>
+          <span className={styles.colLink} style={{ cursor: "default" }}>Creators & Personal Brands</span>
+          <span className={styles.colLink} style={{ cursor: "default" }}>Local Businesses</span>
+          <a href="#contact" className={styles.colLink} style={{ color: "var(--cyan)", marginTop: "0.5rem" }}>→ Book Free Call</a>
         </div>
 
         <div className={styles.col}>
           <h4 className={styles.colTitle}>Contact</h4>
           <a href="mailto:alimohsin7483@gmail.com" className={styles.colLink}>alimohsin7483@gmail.com</a>
           <a href="tel:+917049756964" className={styles.colLink}>+91 70497 56964</a>
-          <p className={styles.colLink} style={{ cursor: "default" }}>Response within 24hrs</p>
+          <p className={styles.colLink} style={{ cursor: "default" }}>Response within 24 hours</p>
         </div>
       </div>
 
       <div className={styles.bottom}>
         <p className={styles.copy}>© 2026 NexGen Digital. All rights reserved.</p>
-        <p className={styles.credit}>Built for every business. Powered by results.</p>
+        <p className={styles.credit}>Conversion-focused. Results-driven. Built to get you leads.</p>
       </div>
     </footer>
   );

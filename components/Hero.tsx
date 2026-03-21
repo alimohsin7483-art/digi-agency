@@ -11,34 +11,34 @@ export default function Hero() {
       <div className={styles.content}>
         <div className={`${styles.badge} anim-1`}>
           <span className={styles.badgeDot} />
-          Websites · Funnels · Automation
+          Conversion-Focused · Results-Driven
         </div>
 
         <h1 className={`${styles.headline} anim-2`}>
-          <span className={styles.line1}>YOUR BUSINESS.</span>
-          <span className={styles.line2}>BUILT TO</span>
+          <span className={styles.line1}>STOP LOSING</span>
+          <span className={styles.line2}>LEADS. START</span>
           <span className={styles.line3}>
-            <span className={styles.glitch} data-text="GROW ONLINE.">GROW ONLINE.</span>
+            <span className={styles.glitch} data-text="CLOSING THEM.">CLOSING THEM.</span>
           </span>
         </h1>
 
         <p className={`${styles.sub} anim-3`}>
-          We design high-converting websites, automated lead systems and smart workflows — so your business attracts more clients, closes more deals and runs more efficiently, every single day.
+          We build high-converting funnels, lead systems and automated workflows for coaches, creators and local businesses — so you get consistent leads and sales, not just a pretty website.
         </p>
 
         <div className={`${styles.actions} anim-4`}>
           <a href="#contact" className="btn-primary">Book Free Strategy Call</a>
-          <a href="#work" className="btn-ghost">View Our Work ↓</a>
+          <a href="#contact" className="btn-ghost">Get Free Audit →</a>
         </div>
 
         <div className={`${styles.proof} anim-5`}>
           <div className={styles.proofItem}>
             <span className={styles.proofDot} />
-            <span>For any business or service</span>
+            <span>No contracts. No fluff.</span>
           </div>
           <div className={styles.proofItem}>
             <span className={styles.proofDot} />
-            <span>Fully done-for-you</span>
+            <span>Built to generate leads</span>
           </div>
           <div className={styles.proofItem}>
             <span className={styles.proofDot} />
@@ -54,7 +54,6 @@ export default function Hero() {
         <div className={styles.hologramRing2} />
         <div className={styles.hologramRing3} />
         <div className={styles.scanBeam} />
-
         <div className={styles.avatar}>
           <div className={styles.avatarHead}>
             <div className={styles.avatarFace}>
@@ -87,15 +86,13 @@ export default function Hero() {
             <span className={styles.panelCode}>&lt;/&gt;</span>
           </div>
         </div>
-
         <div className={styles.hologramLabel}>
-          <span className={styles.hologramName}>SYSTEM ARCHITECT</span>
+          <span className={styles.hologramName}>FUNNEL ARCHITECT</span>
           <span className={styles.hologramStatus}>
             <span className={styles.statusDot} /> ONLINE
           </span>
         </div>
-
-        {["UI/UX", "FUNNEL", "AUTO", "API", "CRM", "SEO"].map((tag, i) => (
+        {["LEADS", "FUNNEL", "AUTO", "CRO", "CRM", "ROI"].map((tag, i) => (
           <div key={tag} className={styles.floatTag} style={{ "--fi": i } as React.CSSProperties}>
             {tag}
           </div>
