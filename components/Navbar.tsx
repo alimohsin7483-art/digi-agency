@@ -14,14 +14,21 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
+      {/* LOGO - always visible on all devices */}
       <a href="#" className={styles.logo}>
         <span className={styles.logoIcon}>⬡</span>
-        NEX<span className={styles.accent}>GEN</span>
+        <span className={styles.logoText}>NEX<span className={styles.accent}>GEN</span></span>
         <span className={styles.logoSub}>DIGITAL</span>
       </a>
 
+      {/* Desktop links */}
       <ul className={styles.links}>
         {links.map((l) => (
           <li key={l}>
@@ -30,19 +37,53 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <a href="#contact" className="btn-primary">Get Started</a>
+      {/* Desktop CTA */}
+      <a href="#contact" className={`btn-primary ${styles.desktopCta}`}>Get Started</a>
 
-      <button className={styles.burger} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+      {/* Burger */}
+      <button
+        className={styles.burger}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
         <span className={menuOpen ? styles.open : ""} />
         <span className={menuOpen ? styles.open : ""} />
       </button>
 
+      {/* Mobile menu */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
+          {/* Close button top right */}
+          <button className={styles.closeBtn} onClick={() => setMenuOpen(false)} aria-label="Close">
+            ✕
+          </button>
+
+          {/* Logo inside mobile menu */}
+          <div className={styles.menuLogo}>
+            <span className={styles.logoIcon}>⬡</span>
+            NEX<span className={styles.accent}>GEN</span>
+          </div>
+
+          {/* Links */}
           {links.map((l) => (
-            <a key={l} href={`#${l.toLowerCase()}`} className={styles.mobileLink} onClick={() => setMenuOpen(false)}>{l}</a>
+            <a
+              key={l}
+              href={`#${l.toLowerCase()}`}
+              className={styles.mobileLink}
+              onClick={() => setMenuOpen(false)}
+            >
+              {l}
+            </a>
           ))}
-          <a href="#contact" className="btn-primary" onClick={() => setMenuOpen(false)}>Get Started</a>
+
+          <a
+            href="#contact"
+            className="btn-primary"
+            onClick={() => setMenuOpen(false)}
+            style={{ marginTop: "0.5rem", fontSize: "0.9rem", padding: "1rem 2.5rem" }}
+          >
+            Book Free Strategy Call →
+          </a>
         </div>
       )}
     </nav>

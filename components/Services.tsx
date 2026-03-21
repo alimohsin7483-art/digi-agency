@@ -5,23 +5,23 @@ const services = [
     icon: "◈",
     number: "01",
     title: "Website Design & Development",
-    desc: "Your website is your #1 salesperson. We build fast, conversion-optimised websites that position you as the authority in your space — and turn visitors into paying clients.",
-    bullets: ["Custom design — no templates", "Mobile-first & lightning fast", "Built to convert, not just impress", "Delivered in 14 days"],
+    desc: "Your website is your most powerful sales tool. We build fast, conversion-optimised websites that make your brand look world-class — and turn visitors into paying customers.",
+    bullets: ["Custom design — no templates", "Mobile-first & lightning fast", "Built to convert, not just look good", "Delivered in 14 days"],
     tag: "Most Popular",
   },
   {
     icon: "⬡",
     number: "02",
     title: "Funnel & Lead Systems",
-    desc: "Stop relying on referrals. We build automated lead funnels that attract your ideal clients, capture their details and nurture them to book — on autopilot.",
-    bullets: ["Lead magnet + landing page", "Email nurture sequences", "Booking system integration", "CRM setup & pipeline"],
+    desc: "Stop depending on referrals and cold outreach. We build automated lead funnels that attract your ideal customers, capture their details and nurture them to buy — on autopilot.",
+    bullets: ["Lead magnet + landing page", "Email nurture sequences", "Booking & inquiry system", "CRM setup & pipeline"],
     tag: "High ROI",
   },
   {
     icon: "⚡",
     number: "03",
     title: "Automation Setup",
-    desc: "Reclaim 10+ hours per week. We map and automate your repetitive business workflows — onboarding, follow-ups, reminders, invoicing — so you focus on clients, not admin.",
+    desc: "Reclaim hours every week. We map and automate your repetitive business workflows — client onboarding, follow-ups, reminders, invoicing — so you focus on growth, not admin.",
     bullets: ["Workflow mapping & design", "Tool integration (Zapier, Make)", "Client onboarding automation", "Ongoing support & maintenance"],
     tag: "Time Saver",
   },
@@ -33,11 +33,10 @@ export default function Services() {
       <div className={styles.header}>
         <div>
           <span className="section-label">// What We Build</span>
-          <h2 className={styles.title}>THREE SYSTEMS.<br />ONE GOAL: MORE CLIENTS.</h2>
-          <p className={styles.sub}>We don&apos;t do everything. We do three things exceptionally well — and together they build a business that runs without you chasing leads.</p>
+          <h2 className={styles.title}>THREE SYSTEMS.<br />ONE GOAL: MORE GROWTH.</h2>
+          <p className={styles.sub}>We don&apos;t do everything. We do three things exceptionally well — and together, they build a business that attracts clients and runs without the constant hustle.</p>
         </div>
       </div>
-
       <div className={styles.grid}>
         {services.map((s) => (
           <div key={s.title} className={styles.card}>

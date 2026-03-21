@@ -11,21 +11,19 @@ export default function Hero() {
       <div className={styles.content}>
         <div className={`${styles.badge} anim-1`}>
           <span className={styles.badgeDot} />
-          For Coaches & Service Businesses
+          Websites · Funnels · Automation
         </div>
 
         <h1 className={`${styles.headline} anim-2`}>
-          <span className={styles.line1}>WE BUILD</span>
-          <span className={styles.line2}>WEBSITES &</span>
+          <span className={styles.line1}>YOUR BUSINESS.</span>
+          <span className={styles.line2}>BUILT TO</span>
           <span className={styles.line3}>
-            SYSTEMS THAT
-            <br />
-            <span className={styles.glitch} data-text="GET CLIENTS.">GET CLIENTS.</span>
+            <span className={styles.glitch} data-text="GROW ONLINE.">GROW ONLINE.</span>
           </span>
         </h1>
 
         <p className={`${styles.sub} anim-3`}>
-          Stop losing leads to a weak online presence. We build high-converting websites, automated lead funnels and smart systems — so your business grows while you focus on delivering results.
+          We design high-converting websites, automated lead systems and smart workflows — so your business attracts more clients, closes more deals and runs more efficiently, every single day.
         </p>
 
         <div className={`${styles.actions} anim-4`}>
@@ -36,15 +34,15 @@ export default function Hero() {
         <div className={`${styles.proof} anim-5`}>
           <div className={styles.proofItem}>
             <span className={styles.proofDot} />
-            <span>Built for coaches & consultants</span>
+            <span>For any business or service</span>
           </div>
           <div className={styles.proofItem}>
             <span className={styles.proofDot} />
-            <span>Done-for-you systems</span>
+            <span>Fully done-for-you</span>
           </div>
           <div className={styles.proofItem}>
             <span className={styles.proofDot} />
-            <span>Results in 14 days</span>
+            <span>Live in 14 days</span>
           </div>
         </div>
       </div>
@@ -58,7 +56,6 @@ export default function Hero() {
         <div className={styles.scanBeam} />
 
         <div className={styles.avatar}>
-          {/* Head */}
           <div className={styles.avatarHead}>
             <div className={styles.avatarFace}>
               <div className={styles.avatarEye} />
@@ -68,7 +65,6 @@ export default function Hero() {
             <div className={styles.avatarHelmet} />
             <div className={styles.avatarVisor} />
           </div>
-          {/* Body */}
           <div className={styles.avatarBody}>
             <div className={styles.avatarChest}>
               <div className={styles.avatarCore} />
@@ -77,7 +73,6 @@ export default function Hero() {
             <div className={styles.avatarShoulder} />
             <div className={styles.avatarShoulder} />
           </div>
-          {/* Hologram panels floating around */}
           <div className={styles.panel1}>
             <span className={styles.panelLine} />
             <span className={styles.panelLine} />
@@ -100,7 +95,6 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* floating data points */}
         {["UI/UX", "FUNNEL", "AUTO", "API", "CRM", "SEO"].map((tag, i) => (
           <div key={tag} className={styles.floatTag} style={{ "--fi": i } as React.CSSProperties}>
             {tag}

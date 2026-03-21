@@ -8,7 +8,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // 👉 Connect Formspree: action="https://formspree.io/f/YOUR_ID"
+    // 👉 Connect Formspree: replace action with https://formspree.io/f/YOUR_ID
     setSubmitted(true);
   };
 
@@ -24,7 +24,7 @@ export default function Contact() {
             SYSTEM.
           </h2>
           <p className={styles.desc}>
-            Book a free 30-minute strategy call. We&apos;ll audit your current online presence, identify the biggest gaps and show you exactly what we&apos;d build — no obligation.
+            Book a free 30-minute strategy call. We&apos;ll review your current online presence, identify the biggest opportunities and show you exactly what we&apos;d build — no obligation, no pressure.
           </p>
           <div className={styles.perks}>
             {[
@@ -39,6 +39,19 @@ export default function Contact() {
               </div>
             ))}
           </div>
+
+          {/* Real contact details */}
+          <div className={styles.contactDetails}>
+            <a href="mailto:alimohsin7483@gmail.com" className={styles.contactItem}>
+              <span className={styles.contactIcon}>✉</span>
+              alimohsin7483@gmail.com
+            </a>
+            <a href="tel:+917049756964" className={styles.contactItem}>
+              <span className={styles.contactIcon}>☎</span>
+              +91 70497 56964
+            </a>
+          </div>
+
           <div className={styles.availability}>
             <span className={styles.availDot} />
             <span className={styles.availText}>Currently accepting 3 new clients this month</span>
