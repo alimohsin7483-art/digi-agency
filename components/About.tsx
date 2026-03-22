@@ -1,21 +1,12 @@
 import styles from "./About.module.css";
 
+// ↓ PASTE YOUR CALENDLY LINK BELOW ↓
+const CALENDLY_LINK = "https://calendly.com/alimohsin7483/30min";
+
 const steps = [
-  {
-    num: "01",
-    title: "UNDERSTAND",
-    desc: "We start with a free strategy call to understand your business, your audience and where you're losing leads. No templates — we map the exact journey your customers take.",
-  },
-  {
-    num: "02",
-    title: "BUILD",
-    desc: "We design and build your full funnel system — website, lead capture, email sequence, booking flow and automation. Every element built to convert, not just impress.",
-  },
-  {
-    num: "03",
-    title: "OPTIMISE",
-    desc: "After launch we track what's working, fix what isn't and continuously improve your conversion rate. Your system gets sharper the longer we work together.",
-  },
+  { num: "01", title: "UNDERSTAND", desc: "We start with a free strategy call to understand your business, your audience and where you're losing leads. No templates — we map the exact journey your customers take." },
+  { num: "02", title: "BUILD", desc: "We design and build your full funnel system — website, lead capture, email sequence, booking flow and automation. Every element built to convert, not just impress." },
+  { num: "03", title: "OPTIMISE", desc: "After launch we track what's working, fix what isn't and continuously improve your conversion rate. Your system gets sharper the longer we work together." },
 ];
 
 const niches = [
@@ -42,8 +33,6 @@ export default function About() {
         <p className={styles.desc}>
           We work with coaches, creators, personal brands and local businesses across every industry. If you sell a service or product and need more leads — we can build the system that gets them.
         </p>
-
-        {/* Niche grid */}
         <div className={styles.nicheGrid}>
           {niches.map((n) => (
             <div key={n.label} className={styles.nicheItem}>
@@ -52,8 +41,13 @@ export default function About() {
             </div>
           ))}
         </div>
-
-        <a href="#contact" className="btn-primary" style={{ marginTop: "2rem", display: "inline-block" }}>
+        <a
+          href={CALENDLY_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary"
+          style={{ marginTop: "2rem", display: "inline-block" }}
+        >
           Book Free Strategy Call →
         </a>
       </div>
@@ -69,8 +63,6 @@ export default function About() {
             {i < steps.length - 1 && <div className={styles.connector} />}
           </div>
         ))}
-
-        {/* Journey visual */}
         <div className={styles.journeyBar}>
           <span className={styles.journeyStep}>VISITOR</span>
           <span className={styles.journeyArrow}>→</span>

@@ -1,5 +1,8 @@
 import styles from "./Footer.module.css";
 
+// ↓ PASTE YOUR CALENDLY LINK BELOW ↓
+const CALENDLY_LINK = "https://calendly.com/alimohsin7483/30min";
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -13,8 +16,14 @@ export default function Footer() {
           <p className={styles.tagline}>
             We build high-converting funnels, lead systems and automation for coaches, creators and local businesses. Stop losing leads. Start closing them.
           </p>
-          <a href="#contact" className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.8rem 1.8rem", display: "inline-block", marginTop: "1rem" }}>
-            Get Free Audit →
+          <a
+            href={CALENDLY_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+            style={{ fontSize: "0.85rem", padding: "0.8rem 1.8rem", display: "inline-block", marginTop: "1rem" }}
+          >
+            Book Free Strategy Call →
           </a>
         </div>
 
@@ -30,7 +39,9 @@ export default function Footer() {
           <span className={styles.colLink} style={{ cursor: "default" }}>Coaches & Consultants</span>
           <span className={styles.colLink} style={{ cursor: "default" }}>Creators & Personal Brands</span>
           <span className={styles.colLink} style={{ cursor: "default" }}>Local Businesses</span>
-          <a href="#contact" className={styles.colLink} style={{ color: "var(--cyan)", marginTop: "0.5rem" }}>→ Book Free Call</a>
+          <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" className={styles.colLink} style={{ color: "var(--cyan)", marginTop: "0.5rem" }}>
+            → Book Free Call
+          </a>
         </div>
 
         <div className={styles.col}>

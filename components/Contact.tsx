@@ -4,11 +4,35 @@ import styles from "./Contact.module.css";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", business: "", service: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // 👉 Connect Formspree: action="https://formspree.io/f/YOUR_ID"
+    setLoading(true);
+
+    try {
+      await fetch("https://connect.mailerlite.com/api/subscribers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_MAILERLITE_KEY}`,
+        },
+        body: JSON.stringify({
+          email: form.email,
+          fields: {
+            name: form.name,
+            last_name: form.service,
+            phone: form.message,
+            company: form.business,
+          },
+        }),
+      });
+    } catch (err) {
+      console.error("MailerLite error:", err);
+    }
+
+    setLoading(false);
     setSubmitted(true);
   };
 
@@ -63,7 +87,19 @@ export default function Contact() {
             <div className={styles.success}>
               <span className={styles.check}>✓</span>
               <p className={styles.successTitle}>YOU&apos;RE BOOKED IN</p>
-              <p className={styles.successSub}>We&apos;ll review your website before the call and come prepared. Expect a message within 24 hours.</p>
+              <p className={styles.successSub}>
+                We&apos;ll review your website before the call. Pick your time slot below:
+              </p>
+              {/* ↓ PASTE YOUR CALENDLY LINK HERE ↓ */}
+              <a
+                href="https://calendly.com/alimohsin7483/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+                style={{ marginTop: "1rem", display: "inline-block" }}
+              >
+                Pick Your Time Slot →
+              </a>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className={styles.form}>
@@ -81,7 +117,7 @@ export default function Contact() {
               </div>
               <div className={styles.field}>
                 <label>Your Website URL</label>
-                <input type="text" placeholder="https://yourwebsite.com (or leave blank if you don't have one)"
+                <input type="text" placeholder="https://yourwebsite.com (or leave blank)"
                   value={form.business} onChange={(e) => setForm({ ...form, business: e.target.value })} />
               </div>
               <div className={styles.field}>
@@ -97,13 +133,22 @@ export default function Contact() {
               </div>
               <div className={styles.field}>
                 <label>Tell us about your business *</label>
-                <textarea placeholder="What do you sell, who is your customer, and what does your current lead generation look like?" rows={4} required
-                  value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+                <textarea
+                  placeholder="What do you sell, who is your customer, and what does your current lead generation look like?"
+                  rows={4} required
+                  value={form.message}
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                />
               </div>
-              <button type="submit" className="btn-primary" style={{ width: "100%", textAlign: "center", display: "block", fontSize: "1rem", padding: "1.1rem" }}>
-                Book My Free Strategy Call →
+              <button
+                type="submit"
+                className="btn-primary"
+                style={{ width: "100%", textAlign: "center", display: "block", fontSize: "1rem", padding: "1.1rem" }}
+                disabled={loading}
+              >
+                {loading ? "Sending..." : "Book My Free Strategy Call →"}
               </button>
-              <p className={styles.note}>We review your website before the call — so the 30 minutes is focused entirely on your business.</p>
+              <p className={styles.note}>No spam. No obligation. Just a useful conversation.</p>
             </form>
           )}
         </div>

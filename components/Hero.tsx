@@ -1,5 +1,8 @@
 import styles from "./Hero.module.css";
 
+// ↓ PASTE YOUR CALENDLY LINK BELOW ↓
+const CALENDLY_LINK = "https://calendly.com/alimohsin7483/30min";
+
 export default function Hero() {
   return (
     <section className={styles.hero}>
@@ -27,7 +30,9 @@ export default function Hero() {
         </p>
 
         <div className={`${styles.actions} anim-4`}>
-          <a href="#contact" className="btn-primary">Book Free Strategy Call</a>
+          <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary">
+            Book Free Strategy Call
+          </a>
           <a href="#contact" className="btn-ghost">Get Free Audit →</a>
         </div>
 
