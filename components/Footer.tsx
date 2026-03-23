@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
 
 // ↓ PASTE YOUR CALENDLY LINK BELOW ↓
-const CALENDLY_LINK = "https://calendly.com/alimohsin7483/30min";
+// Scrolls to contact form
 
 export default function Footer() {
   return (
@@ -17,7 +17,7 @@ export default function Footer() {
             We build high-converting funnels, lead systems and automation for coaches, creators and local businesses. Stop losing leads. Start closing them.
           </p>
           <a
-            href={CALENDLY_LINK}
+            href="#contact"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
@@ -39,7 +39,7 @@ export default function Footer() {
           <span className={styles.colLink} style={{ cursor: "default" }}>Coaches & Consultants</span>
           <span className={styles.colLink} style={{ cursor: "default" }}>Creators & Personal Brands</span>
           <span className={styles.colLink} style={{ cursor: "default" }}>Local Businesses</span>
-          <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" className={styles.colLink} style={{ color: "var(--cyan)", marginTop: "0.5rem" }}>
+          <a href="#contact" target="_blank" rel="noopener noreferrer" className={styles.colLink} style={{ color: "var(--cyan)", marginTop: "0.5rem" }}>
             → Book Free Call
           </a>
         </div>

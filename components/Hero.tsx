@@ -1,7 +1,7 @@
 import styles from "./Hero.module.css";
 
 // ↓ PASTE YOUR CALENDLY LINK BELOW ↓
-const CALENDLY_LINK = "https://calendly.com/alimohsin7483/30min";
+// Scrolls to contact form
 
 export default function Hero() {
   return (
@@ -30,7 +30,7 @@ export default function Hero() {
         </p>
 
         <div className={`${styles.actions} anim-4`}>
-          <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary">
+          <a href="#contact" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Book Free Strategy Call
           </a>
           <a href="#contact" className="btn-ghost">Get Free Audit →</a>

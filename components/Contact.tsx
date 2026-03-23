@@ -12,24 +12,13 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      await fetch("https://connect.mailerlite.com/api/subscribers", {
+      await fetch("/api/subscribe", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_MAILERLITE_KEY}`,
-        },
-        body: JSON.stringify({
-          email: form.email,
-          fields: {
-            name: form.name,
-            last_name: form.service,
-            phone: form.message,
-            company: form.business,
-          },
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
       });
     } catch (err) {
-      console.error("MailerLite error:", err);
+      console.error("Error:", err);
     }
 
     setLoading(false);
@@ -86,11 +75,10 @@ export default function Contact() {
           {submitted ? (
             <div className={styles.success}>
               <span className={styles.check}>✓</span>
-              <p className={styles.successTitle}>YOU&apos;RE BOOKED IN</p>
+              <p className={styles.successTitle}>YOU&apos;RE IN!</p>
               <p className={styles.successSub}>
-                We&apos;ll review your website before the call. Pick your time slot below:
+                We&apos;ll review your website before the call. Pick your time slot now:
               </p>
-              {/* ↓ PASTE YOUR CALENDLY LINK HERE ↓ */}
               <a
                 href="https://calendly.com/alimohsin7483/30min"
                 target="_blank"
@@ -122,7 +110,8 @@ export default function Contact() {
               </div>
               <div className={styles.field}>
                 <label>What do you need most? *</label>
-                <select required value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}>
+                <select required value={form.service}
+                  onChange={(e) => setForm({ ...form, service: e.target.value })}>
                   <option value="">Select the biggest problem...</option>
                   <option>I need a website that actually converts</option>
                   <option>I need a funnel to generate leads</option>
