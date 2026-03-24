@@ -1,7 +1,21 @@
+"use client";
 import styles from "./Footer.module.css";
 
-// ↓ PASTE YOUR CALENDLY LINK BELOW ↓
-// Scrolls to contact form
+function scrollToContact(e: React.MouseEvent) {
+  e.preventDefault();
+  const section = document.getElementById("contact");
+  if (!section) return;
+  section.scrollIntoView({ behavior: "smooth", block: "start" });
+  setTimeout(() => {
+    const form = section.querySelector("form");
+    if (form) {
+      form.classList.remove("form-highlight");
+      void (form as HTMLElement).offsetWidth;
+      form.classList.add("form-highlight");
+      setTimeout(() => form.classList.remove("form-highlight"), 2000);
+    }
+  }, 800);
+}
 
 export default function Footer() {
   return (
@@ -18,8 +32,7 @@ export default function Footer() {
           </p>
           <a
             href="#contact"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={scrollToContact}
             className="btn-primary"
             style={{ fontSize: "0.85rem", padding: "0.8rem 1.8rem", display: "inline-block", marginTop: "1rem" }}
           >
@@ -39,7 +52,7 @@ export default function Footer() {
           <span className={styles.colLink} style={{ cursor: "default" }}>Coaches & Consultants</span>
           <span className={styles.colLink} style={{ cursor: "default" }}>Creators & Personal Brands</span>
           <span className={styles.colLink} style={{ cursor: "default" }}>Local Businesses</span>
-          <a href="#contact" target="_blank" rel="noopener noreferrer" className={styles.colLink} style={{ color: "var(--cyan)", marginTop: "0.5rem" }}>
+          <a href="#contact" onClick={scrollToContact} className={styles.colLink} style={{ color: "var(--cyan)", marginTop: "0.5rem" }}>
             → Book Free Call
           </a>
         </div>

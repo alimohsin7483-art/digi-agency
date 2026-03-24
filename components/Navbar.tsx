@@ -19,9 +19,31 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setMenuOpen(false);
+
+    const section = document.getElementById("contact");
+    if (!section) return;
+
+    // Smooth scroll to contact
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    // Highlight the form after scroll
+    setTimeout(() => {
+      const form = section.querySelector("form");
+      if (form) {
+        form.classList.remove("form-highlight");
+        void (form as HTMLElement).offsetWidth; // force reflow
+        form.classList.add("form-highlight");
+        setTimeout(() => form.classList.remove("form-highlight"), 2000);
+      }
+    }, 800);
+  };
+
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
-      {/* LOGO - always visible on all devices */}
+      {/* LOGO */}
       <a href="#" className={styles.logo}>
         <span className={styles.logoIcon}>⬡</span>
         <span className={styles.logoText}>NEX<span className={styles.accent}>GEN</span></span>
@@ -38,7 +60,9 @@ export default function Navbar() {
       </ul>
 
       {/* Desktop CTA */}
-      <a href="#contact" className={`btn-primary ${styles.desktopCta}`}>Get Started</a>
+      <a href="#contact" onClick={scrollToContact} className={`btn-primary ${styles.desktopCta}`}>
+        Get Started
+      </a>
 
       {/* Burger */}
       <button
@@ -53,18 +77,13 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
-          {/* Close button top right */}
           <button className={styles.closeBtn} onClick={() => setMenuOpen(false)} aria-label="Close">
             ✕
           </button>
-
-          {/* Logo inside mobile menu */}
           <div className={styles.menuLogo}>
             <span className={styles.logoIcon}>⬡</span>
             NEX<span className={styles.accent}>GEN</span>
           </div>
-
-          {/* Links */}
           {links.map((l) => (
             <a
               key={l}
@@ -75,11 +94,10 @@ export default function Navbar() {
               {l}
             </a>
           ))}
-
           <a
             href="#contact"
+            onClick={scrollToContact}
             className="btn-primary"
-            onClick={() => setMenuOpen(false)}
             style={{ marginTop: "0.5rem", fontSize: "0.9rem", padding: "1rem 2.5rem" }}
           >
             Book Free Strategy Call →

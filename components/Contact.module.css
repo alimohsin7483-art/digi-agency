@@ -36,3 +36,8 @@
 }
 .contactItem:hover { color: var(--cyan); }
 .contactIcon { color: var(--cyan); font-size: 0.9rem; flex-shrink: 0; }
+
+/* Form highlight on scroll */
+.form {
+  transition: box-shadow 0.3s, border-color 0.3s;
+}

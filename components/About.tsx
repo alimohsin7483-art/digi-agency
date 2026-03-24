@@ -1,7 +1,21 @@
+"use client";
 import styles from "./About.module.css";
 
-// ↓ PASTE YOUR CALENDLY LINK BELOW ↓
-// Scrolls to contact form
+function scrollToContact(e: React.MouseEvent) {
+  e.preventDefault();
+  const section = document.getElementById("contact");
+  if (!section) return;
+  section.scrollIntoView({ behavior: "smooth", block: "start" });
+  setTimeout(() => {
+    const form = section.querySelector("form");
+    if (form) {
+      form.classList.remove("form-highlight");
+      void (form as HTMLElement).offsetWidth;
+      form.classList.add("form-highlight");
+      setTimeout(() => form.classList.remove("form-highlight"), 2000);
+    }
+  }, 800);
+}
 
 const steps = [
   { num: "01", title: "UNDERSTAND", desc: "We start with a free strategy call to understand your business, your audience and where you're losing leads. No templates — we map the exact journey your customers take." },
@@ -43,8 +57,7 @@ export default function About() {
         </div>
         <a
           href="#contact"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={scrollToContact}
           className="btn-primary"
           style={{ marginTop: "2rem", display: "inline-block" }}
         >

@@ -1,7 +1,21 @@
+"use client";
 import styles from "./Hero.module.css";
 
-// ↓ PASTE YOUR CALENDLY LINK BELOW ↓
-// Scrolls to contact form
+function scrollToContact(e: React.MouseEvent) {
+  e.preventDefault();
+  const section = document.getElementById("contact");
+  if (!section) return;
+  section.scrollIntoView({ behavior: "smooth", block: "start" });
+  setTimeout(() => {
+    const form = section.querySelector("form");
+    if (form) {
+      form.classList.remove("form-highlight");
+      void (form as HTMLElement).offsetWidth;
+      form.classList.add("form-highlight");
+      setTimeout(() => form.classList.remove("form-highlight"), 2000);
+    }
+  }, 800);
+}
 
 export default function Hero() {
   return (
@@ -30,10 +44,10 @@ export default function Hero() {
         </p>
 
         <div className={`${styles.actions} anim-4`}>
-          <a href="#contact" target="_blank" rel="noopener noreferrer" className="btn-primary">
+          <a href="#contact" onClick={scrollToContact} className="btn-primary">
             Book Free Strategy Call
           </a>
-          <a href="#contact" className="btn-ghost">Get Free Audit →</a>
+          <a href="#work" className="btn-ghost">View Our Work ↓</a>
         </div>
 
         <div className={`${styles.proof} anim-5`}>

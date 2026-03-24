@@ -14,7 +14,12 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+html {
+  scroll-behavior: smooth;
+  /* Fix scroll offset for fixed navbar */
+  scroll-padding-top: 80px;
+}
 
 body {
   background: var(--black);
@@ -24,6 +29,13 @@ body {
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
+  /* Remove white flash on load */
+  background-color: var(--black);
+}
+
+/* Remove white flash */
+html, body {
+  background: var(--black);
 }
 
 ::selection { background: var(--cyan); color: var(--black); }
@@ -78,6 +90,18 @@ img { max-width: 100%; display: block; }
   color: var(--cyan);
   display: block;
   margin-bottom: 0.8rem;
+}
+
+/* Form highlight animation when scrolled to */
+@keyframes formHighlight {
+  0%   { box-shadow: 0 0 0 0 rgba(0, 245, 255, 0); border-color: var(--border); }
+  30%  { box-shadow: 0 0 40px 8px rgba(0, 245, 255, 0.2); border-color: rgba(0,245,255,0.6); }
+  70%  { box-shadow: 0 0 40px 8px rgba(0, 245, 255, 0.15); border-color: rgba(0,245,255,0.4); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 245, 255, 0); border-color: var(--border); }
+}
+
+.form-highlight {
+  animation: formHighlight 1.8s ease forwards !important;
 }
 
 /* Animations */
