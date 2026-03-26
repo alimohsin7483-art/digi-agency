@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
 
     const groupData = await groupRes.json();
     const group = groupData?.data?.find(
-      (g: { id: string; name: string }) => g.name === "Strategy Call Leads"
+      (g: { id: string; name: string }) => g.name === "Strategy Call Lead"
     );
 
     // Step 2 — Add subscriber
