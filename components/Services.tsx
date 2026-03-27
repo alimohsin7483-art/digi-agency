@@ -5,39 +5,24 @@ const services = [
     icon: "◈",
     number: "01",
     title: "High-Converting Website",
-    desc: "Most websites look good but do nothing. We build websites engineered for one purpose — turning visitors into leads and leads into paying customers. Every element has a job.",
-    bullets: [
-      "Conversion-first design and copy",
-      "Mobile-optimised and fast",
-      "Clear CTAs at every touchpoint",
-      "Delivered in 14 days",
-    ],
+    desc: "Websites engineered to turn visitors into leads. Every element — copy, layout, CTA — is built to convert. Not just look good.",
+    bullets: ["Conversion-first design", "Mobile-optimised & fast", "Clear CTAs at every step", "Delivered in 14 days"],
     tag: "Foundation",
   },
   {
     icon: "⬡",
     number: "02",
-    title: "Lead Funnel System",
-    desc: "A website alone is not a business. We build the complete system — landing page, lead magnet, email sequence and booking flow — that moves strangers into booked calls on autopilot.",
-    bullets: [
-      "Lead magnet + squeeze page",
-      "Automated email nurture sequence",
-      "Calendar booking integration",
-      "Full CRM pipeline setup",
-    ],
+    title: "Funnel & Lead System",
+    desc: "A complete system that moves strangers into booked calls — lead magnet, landing page, email sequence and booking flow running on autopilot.",
+    bullets: ["Lead magnet + landing page", "Automated email nurture", "Calendar booking integration", "Full CRM pipeline setup"],
     tag: "Core Product",
   },
   {
     icon: "⚡",
     number: "03",
-    title: "Automation & Follow-Up",
-    desc: "Most leads go cold because of slow follow-up. We automate your entire post-enquiry process — so every lead gets followed up instantly, consistently and without you lifting a finger.",
-    bullets: [
-      "Instant lead response automation",
-      "Multi-step follow-up sequences",
-      "Onboarding and reminder flows",
-      "Integrates with your existing tools",
-    ],
+    title: "AI & Automation Setup",
+    desc: "Stop losing leads to slow follow-up. We automate your entire post-enquiry process with AI-powered responses, WhatsApp flows and smart sequences.",
+    bullets: ["Instant AI lead response", "WhatsApp automation", "Multi-step follow-up flows", "Integrates with your tools"],
     tag: "Multiplier",
   },
 ];
@@ -47,10 +32,10 @@ export default function Services() {
     <section id="services" className={styles.section}>
       <div className={styles.header}>
         <div>
-          <span className="section-label">// The Problem & The Fix</span>
-          <h2 className={styles.title}>YOUR WEBSITE IS NOT<br />THE PROBLEM. YOUR<br />SYSTEM IS.</h2>
+          <span className="section-label">// What We Build</span>
+          <h2 className={styles.title}>EVERY SYSTEM BUILT FOR<br />ONE GOAL — CONVERSION.</h2>
           <p className={styles.sub}>
-            Most businesses have a website. Very few have a system. A system is what turns traffic into leads, leads into calls and calls into clients — automatically. Here&apos;s what we build.
+            Every system we build is powered by strategy, funnels and automation. We don&apos;t build websites. We build revenue machines.
           </p>
         </div>
       </div>

@@ -28,40 +28,47 @@ export default function Hero() {
       <div className={styles.content}>
         <div className={`${styles.badge} anim-1`}>
           <span className={styles.badgeDot} />
-          Conversion-Focused · Results-Driven
+          Strategic Marketing · Funnels · AI Automation
         </div>
 
         <h1 className={`${styles.headline} anim-2`}>
-          <span className={styles.line1}>STOP LOSING</span>
-          <span className={styles.line2}>LEADS. START</span>
+          <span className={styles.line1}>WE BUILD FUNNELS</span>
+          <span className={styles.line2}>& WEBSITES THAT</span>
           <span className={styles.line3}>
-            <span className={styles.glitch} data-text="CLOSING THEM.">CLOSING THEM.</span>
+            <span className={styles.glitch} data-text="TURN TRAFFIC INTO REVENUE.">TURN TRAFFIC INTO REVENUE.</span>
           </span>
         </h1>
 
         <p className={`${styles.sub} anim-3`}>
-          We build high-converting funnels, lead systems and automated workflows for coaches, creators and local businesses — so you get consistent leads and sales, not just a pretty website.
+          Not just design. Not just ads. We combine strategy, funnels and automation to generate consistent leads and sales — for businesses that are serious about growth.
         </p>
 
         <div className={`${styles.actions} anim-4`}>
           <a href="#contact" onClick={scrollToContact} className="btn-primary">
-            Book Free Strategy Call
+            Get Free Strategy Audit
           </a>
-          <a href="#work" className="btn-ghost">View Our Work ↓</a>
+          <a
+            href="https://wa.me/917049756964?text=Hi%20NexGen%2C%20I%27m%20interested%20in%20a%20strategy%20call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-ghost"
+          >
+            💬 Chat on WhatsApp
+          </a>
         </div>
 
         <div className={`${styles.proof} anim-5`}>
           <div className={styles.proofItem}>
             <span className={styles.proofDot} />
-            <span>No contracts. No fluff.</span>
+            <span>Strategy-first approach</span>
           </div>
           <div className={styles.proofItem}>
             <span className={styles.proofDot} />
-            <span>Built to generate leads</span>
+            <span>AI-powered systems</span>
           </div>
           <div className={styles.proofItem}>
             <span className={styles.proofDot} />
-            <span>Live in 14 days</span>
+            <span>Limited client slots available</span>
           </div>
         </div>
       </div>
@@ -111,7 +118,7 @@ export default function Hero() {
             <span className={styles.statusDot} /> ONLINE
           </span>
         </div>
-        {["LEADS", "FUNNEL", "AUTO", "CRO", "CRM", "ROI"].map((tag, i) => (
+        {["LEADS", "FUNNEL", "AUTO", "AI", "CRM", "ROI"].map((tag, i) => (
           <div key={tag} className={styles.floatTag} style={{ "--fi": i } as React.CSSProperties}>
             {tag}
           </div>

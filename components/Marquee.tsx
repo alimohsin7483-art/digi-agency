@@ -2,14 +2,10 @@
 import styles from "./Marquee.module.css";
 
 const items = [
-  "HIGH-CONVERTING FUNNELS",
-  "LEAD GENERATION SYSTEMS",
-  "COACHES & CREATORS",
-  "LOCAL BUSINESSES",
-  "AUTOMATED FOLLOW-UPS",
-  "VISITOR → LEAD → CUSTOMER",
-  "RESULTS-DRIVEN BUILDS",
-  "LIVE IN 14 DAYS",
+  "WordPress", "Shopify", "React", "Next.js",
+  "AI-Powered Systems", "Funnel Automation", "Meta Ads", "Google Ads",
+  "Email Automation", "WhatsApp Automation", "Conversion Tracking",
+  "Analytics", "High-Converting Funnels",
 ];
 
 export default function Marquee() {

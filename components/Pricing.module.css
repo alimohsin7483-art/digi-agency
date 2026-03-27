@@ -1,0 +1,23 @@
+.section { padding: 7rem 3rem; border-top: 1px solid var(--border); }
+.header { max-width: 600px; margin-bottom: 4rem; }
+.title { font-family: 'Orbitron', monospace; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 900; letter-spacing: 0.04em; line-height: 1.05; margin-bottom: 1rem; }
+.cyan { color: var(--cyan); }
+.sub { font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--gray); line-height: 1.75; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+.card { background: var(--card); border: 1px solid var(--border); padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 1.5rem; position: relative; transition: border-color 0.3s; }
+.card:hover { border-color: rgba(0,245,255,0.25); }
+.highlighted { border-color: var(--cyan) !important; }
+.popularBadge { position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--black); font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 1.2rem; white-space: nowrap; }
+.planTop { display: flex; flex-direction: column; gap: 0.5rem; }
+.planName { font-family: 'Orbitron', monospace; font-size: 1.2rem; font-weight: 900; letter-spacing: 0.1em; color: var(--white); }
+.planDesc { font-family: 'Inter', sans-serif; font-size: 0.88rem; color: var(--gray); line-height: 1.6; }
+.planPrice { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
+.price { font-family: 'Orbitron', monospace; font-size: 2.5rem; font-weight: 900; color: var(--cyan); letter-spacing: 0.04em; line-height: 1; display: block; }
+.period { font-family: 'Inter', sans-serif; font-size: 0.78rem; color: var(--gray); margin-top: 0.3rem; display: block; }
+.features { display: flex; flex-direction: column; gap: 0.75rem; flex: 1; }
+.feature { display: flex; align-items: flex-start; gap: 0.7rem; font-family: 'Inter', sans-serif; font-size: 0.88rem; color: var(--gray); }
+.check { color: var(--cyan); flex-shrink: 0; font-size: 0.8rem; margin-top: 0.1rem; }
+.note { text-align: center; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--gray); padding: 1.5rem; background: var(--card); border: 1px solid var(--border); }
+.noteLink { color: var(--cyan); font-weight: 500; transition: opacity 0.2s; }
+.noteLink:hover { opacity: 0.7; }
+@media (max-width: 900px) { .section { padding: 5rem 1.5rem; } .grid { grid-template-columns: 1fr; } }

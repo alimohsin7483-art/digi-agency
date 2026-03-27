@@ -1,0 +1,32 @@
+.strip {
+  padding: 2rem 3rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--dark);
+}
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.text {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+.accent { color: var(--cyan); }
+.divider { color: var(--border); font-size: 1.2rem; }
+.sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--gray);
+}
+.sub strong { color: var(--cyan); font-weight: 600; }
+@media (max-width: 768px) {
+  .strip { padding: 1.5rem; }
+  .divider { display: none; }
+}

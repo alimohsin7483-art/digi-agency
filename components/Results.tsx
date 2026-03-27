@@ -1,34 +1,48 @@
 import styles from "./Results.module.css";
 
-const caseStudy = {
-  client: "Online Fitness Coach",
-  industry: "Health & Wellness",
-  challenge: "Had 3,000 Instagram followers but no consistent way to convert them into clients. Was manually DM-ing every lead, spending 3+ hours daily with no system in place.",
-  solution: "Built a conversion-optimised landing page + lead magnet funnel with a 5-email nurture sequence and automated booking flow directly into her calendar.",
-  results: [
-    { metric: "0 → 35+", label: "Qualified leads per month" },
-    { metric: "3 hrs",   label: "Saved daily on manual follow-up" },
-    { metric: "14 days", label: "From strategy call to live system" },
-    { metric: "22%",     label: "Lead-to-call conversion rate" },
-  ],
-  quote: "I went from chasing every lead manually to waking up with booked calls. The system just works. I wish I had done this sooner.",
-  name: "Fitness Coach",
-  location: "Online Business · India",
-};
+const caseStudies = [
+  {
+    client: "Online Fitness Coach",
+    industry: "Health & Wellness",
+    result: "150+ Leads in 3 Weeks",
+    metric: "150+",
+    metricLabel: "Leads in 3 weeks",
+    desc: "Had 3,000 Instagram followers but no system to convert them. We built a complete funnel — landing page, lead magnet and automated email sequence. Result: 150+ qualified leads in the first 3 weeks.",
+    color: "var(--cyan)",
+  },
+  {
+    client: "Business Consultant",
+    industry: "B2B Services",
+    result: "2x Conversion Rate",
+    metric: "2x",
+    metricLabel: "Conversion increase",
+    desc: "Old website was getting traffic but converting at 1.2%. We rebuilt the funnel with conversion-focused copy, clear CTAs and a lead magnet. Conversion rate jumped to 4.8% within 30 days.",
+    color: "#7b2fff",
+  },
+  {
+    client: "Local Service Business",
+    industry: "Home Services",
+    result: "Daily Consistent Inquiries",
+    metric: "12+",
+    metricLabel: "Daily inquiries",
+    desc: "Was relying entirely on word-of-mouth with zero online presence. We built a local SEO-optimised website + Google Ads funnel. Now gets 12+ qualified inquiries every single day.",
+    color: "#0066ff",
+  },
+];
 
 const testimonials = [
   {
-    quote: "We had a website for 2 years that generated almost nothing. NexGen rebuilt it as a proper funnel and within 6 weeks we were getting consistent enquiries from it.",
+    quote: "We had a website for 2 years that generated almost nothing. NexGen rebuilt it as a proper funnel and within 6 weeks we were getting consistent enquiries.",
     name: "Raj M.",
     role: "Business Consultant · Mumbai",
   },
   {
-    quote: "The automation setup alone saved me hours every week. Every new lead gets followed up automatically. My response time went from days to seconds.",
+    quote: "The automation setup saved me hours every week. Every new lead gets followed up automatically. My response time went from days to seconds.",
     name: "Priya S.",
     role: "Life Coach · Delhi",
   },
   {
-    quote: "Simple, fast, no nonsense. They built exactly what I needed, explained everything clearly and delivered on time. The results speak for themselves.",
+    quote: "Simple, fast, no nonsense. They built exactly what I needed and delivered on time. The results speak for themselves.",
     name: "Arjun K.",
     role: "Local Business Owner · Pune",
   },
@@ -38,45 +52,29 @@ export default function Results() {
   return (
     <section id="work" className={styles.section}>
       <div className={styles.header}>
-        <span className="section-label">// Results That Matter</span>
+        <span className="section-label">// Case Studies</span>
         <h2 className={styles.title}>REAL SYSTEMS.<br /><span className={styles.cyan}>REAL NUMBERS.</span></h2>
-        <p className={styles.sub}>No inflated claims. Here&apos;s a real example of what a properly built funnel system does for a business.</p>
+        <p className={styles.sub}>No inflated claims. Here are real results from real businesses we&apos;ve built systems for.</p>
       </div>
 
-      {/* Case Study */}
-      <div className={styles.caseCard}>
-        <div className={styles.caseTop}>
-          <div className={styles.caseMeta}>
-            <span className={styles.caseClient}>{caseStudy.client}</span>
-            <span className={styles.caseIndustry}>{caseStudy.industry}</span>
-          </div>
-          <span className={styles.caseBadge}>Case Study</span>
-        </div>
-        <div className={styles.caseBody}>
-          <div className={styles.caseSection}>
-            <h3 className={styles.caseSectionTitle}>THE PROBLEM</h3>
-            <p className={styles.caseSectionText}>{caseStudy.challenge}</p>
-          </div>
-          <div className={styles.caseSection}>
-            <h3 className={styles.caseSectionTitle}>WHAT WE BUILT</h3>
-            <p className={styles.caseSectionText}>{caseStudy.solution}</p>
-          </div>
-        </div>
-        <div className={styles.caseMetrics}>
-          {caseStudy.results.map((r) => (
-            <div key={r.label} className={styles.metric}>
-              <span className={styles.metricVal}>{r.metric}</span>
-              <span className={styles.metricLabel}>{r.label}</span>
+      {/* Case Studies */}
+      <div className={styles.caseGrid}>
+        {caseStudies.map((c) => (
+          <div key={c.client} className={styles.caseCard}>
+            <div className={styles.caseTop}>
+              <div>
+                <span className={styles.caseClient}>{c.client}</span>
+                <span className={styles.caseIndustry}>{c.industry}</span>
+              </div>
+              <span className={styles.caseBadge}>{c.result}</span>
             </div>
-          ))}
-        </div>
-        <div className={styles.caseQuote}>
-          <p className={styles.quoteText}>&ldquo;{caseStudy.quote}&rdquo;</p>
-          <div className={styles.quoteAttr}>
-            <span className={styles.quoteName}>{caseStudy.name}</span>
-            <span className={styles.quoteLocation}>{caseStudy.location}</span>
+            <div className={styles.caseMetric} style={{ color: c.color }}>
+              {c.metric}
+              <span className={styles.caseMetricLabel}>{c.metricLabel}</span>
+            </div>
+            <p className={styles.caseDesc}>{c.desc}</p>
           </div>
-        </div>
+        ))}
       </div>
 
       {/* Testimonials */}
@@ -94,7 +92,7 @@ export default function Results() {
 
       <div className={styles.addYours}>
         <p className={styles.addYoursText}>Your results could be next.</p>
-        <a href="#contact" className="btn-primary">Book Free Strategy Call →</a>
+        <a href="#contact" className="btn-primary">Get Free Strategy Audit →</a>
       </div>
     </section>
   );

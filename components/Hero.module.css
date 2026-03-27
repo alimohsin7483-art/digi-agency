@@ -280,3 +280,95 @@
   .hero { grid-template-columns: 1fr; padding: 8rem 1.5rem 4rem; }
   .avatarWrap { height: 400px; transform: scale(0.85); }
 }
+
+.line4 {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.8rem, 3.5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+  color: var(--white);
+}
+
+.urgency {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00ff88;
+  margin-top: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.urgencyDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 8px #00ff88;
+  flex-shrink: 0;
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.urgency {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #00ff88;
+  margin-top: 1rem;
+}
+.urgencyDot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 8px #00ff88;
+  flex-shrink: 0;
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.urgency {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00ff88;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.2rem;
+}
+
+.urgency {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-family: 'Inter', sans-serif; font-size: 0.85rem;
+  font-weight: 500; color: #00ff88; margin-top: 1rem;
+}
+.urgencyDot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #00ff88; box-shadow: 0 0 8px #00ff88;
+  flex-shrink: 0; animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.urgency {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #00ff88;
+  margin-top: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.urgencyDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 8px #00ff88;
+  flex-shrink: 0;
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}

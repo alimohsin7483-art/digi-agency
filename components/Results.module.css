@@ -114,3 +114,17 @@
 @media (max-width: 900px) {
   .testimonials { grid-template-columns: 1fr; }
 }
+
+/* Case Studies Grid */
+.caseGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+.caseCard { background: var(--card); border: 1px solid var(--border); padding: 2.5rem 2rem; transition: border-color 0.3s, transform 0.3s; }
+.caseCard:hover { border-color: rgba(0,245,255,0.25); transform: translateY(-3px); }
+.caseTop { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.5rem; gap: 1rem; flex-wrap: wrap; }
+.caseClient { font-family: 'Orbitron', monospace; font-size: 0.85rem; font-weight: 700; color: var(--white); display: block; margin-bottom: 0.3rem; }
+.caseIndustry { font-family: 'Inter', sans-serif; font-size: 0.78rem; color: var(--cyan); opacity: 0.7; display: block; }
+.caseBadge { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); border: 1px solid rgba(0,245,255,0.3); padding: 0.3rem 0.7rem; white-space: nowrap; flex-shrink: 0; }
+.caseMetric { font-family: 'Orbitron', monospace; font-size: 3rem; font-weight: 900; line-height: 1; margin-bottom: 0.5rem; display: flex; flex-direction: column; }
+.caseMetricLabel { font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--gray); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 0.3rem; }
+.caseDesc { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--gray); line-height: 1.7; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+
+@media (max-width: 900px) { .caseGrid { grid-template-columns: 1fr; } }
